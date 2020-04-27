@@ -110,33 +110,9 @@ I will give a detailed explanation below.
 
 
 [br/]
-# Technical Details
+# Final Visualization Dashboard
+I have set up a Visualization dashboard here, which could link to [a python backend](http://34.68.118.241:8866/) made all by myself.
+Feel free to click it, it is running on Google Cloud with my personal education account, so this limits the running speed, please be patient.
 
-## Installation
-
-- Make sure you have `idyll` installed (`npm i -g idyll`).
-- Clone this repo and run `npm install`.
-
-
-    [var name:"exampleVar" value:5 /]
-
-    [Range min:0 max:10 value:exampleVar /]
-    [Display value:exampleVar /]
-    [data name:"lakeHuron" source:"lakeHuron.csv" /]
-    [CustomD3Component className:"d3-component" state:`state+1` /]
-
-## Developing a post locally
-
-Run `idyll`.
-
-## Building a post for production
-
-Run `idyll build`. The output will appear in the top-level `build` folder. To change the output location, change the `output` option in `package.json`.
-
-## Deploying
-
-Make sure your post has been built, then deploy the docs folder via any static hosting service.
-
-## Dependencies
-
-You can install custom dependencies by running `npm install <package-name> --save`. Note that any collaborators will also need download the package locally by running `npm install` after pulling the changes.
+Data from [Data World](https://data.world/markmarkoh/coronavirus-data)
+Inspired by [Aatishb](https://aatishb.com/covidtrends/)
