@@ -1,0 +1,142 @@
+[meta title:"How to evaluate the turnaround point for COVID-19" description:"Visualization Final Project" /]
+
+[Header 
+  fullWidth:true
+  className:"article-header"
+  title:"How to evaluate the turnaround point for COVID-19"
+  subtitle:"Visualization Explanation"
+  author:"Siyu Ye"
+  authorLink:"https://github.com/Andyyesiyu"
+  date:`(new Date()).toDateString()`
+  background:"#222222"
+  color:"#ffffff"
+   /]
+
+# Introduction
+
+The coronavirus has continued to influence human beings. People also take plenty of measures like lockdown and travel restrictions 
+to fight against this transparent enemy. 
+But what effect of these measures and are them enough? What's the step are we located in the whole process? 
+Are we winning or losing? Are we below the turnaround point? 
+This is the topic we will cover today.
+
+# The overall trending of COVID-19
+
+There are many researches regarding the pandemic trending, which shows that it follows an exponentially increasing curve. 
+The exponential function arises at a rate proportional to its current value. 
+So the value will reach a incredible growth rate in a short period of time.
+The COVID-19 also follows the exponential function and here I show the current accumulated confirmed cases of 
+each country since they reach the first 100 cases.
+
+[img   fullWidth:true className:"overall" src:"static/images/overall_split.png"/]
+
+This graph use the log scale as the y axes. We can see that the number double compared to the previous one through the whole range.
+As the scale is different with the familiar one for human beings, 
+There is a joke said that **the hardest thing for human being is to understand the exponential function.** 
+This also shapes the reason why it's hard to predict the exponential trend and find the turnaround point.
+I will give a detailed explanation below.
+
+[Desmos equation:"y=e^x" /]
+
+
+[var name:"state" value:0 /]
+[var name:"imgLoc" value:`['static/images/logconfuse.png','static/images/logtrending.png','static/images/overall.png']` /]
+
+
+[Scroller currentStep:state]
+
+  [Graphic className:"d3-component-container"]
+    // [CustomD3Component className:"d3-component" state:`state+1` /]
+  [img   fullWidth:true className:"overall" src:`imgLoc.slice(0,1)`/]
+
+  [/Graphic]
+
+  [Graphic className:"d3-component-container"]
+    // [CustomD3Component className:"d3-component" state:`state+1` /]
+    [img   fullWidth:true className:"overall" src:`imgLoc.slice(1,2)`/]
+
+  [/Graphic]
+
+  [Step]
+
+    # Hard to predict the End?
+    Followed by the previous topic, why it is hard to predict the turnaround point of the exponential trend? 
+    First we must know where is the turnaround point for an exponential curve. After the "exponential explosion", the growth rate
+    will reach a plateau. This is the turnaround point. 
+    But because, the overall trending is pretty the same among the growth phase. 
+    According to the right graph, we can see that the length of the exponential function is hard to predict when we in the middle. 
+    It seems impossible to judge how long we still need to go. 
+    But this turnaround point is important because the final result will be several times the quantity of the others.
+    By predicting the turnaround point, we can better recognize the current situation and decide whether we should more focus on the 
+    economic side or tight the restrictions.
+
+
+    *Graph Created By [minutephysics](https://www.youtube.com/watch?v=54XLXg4fYsc)*
+
+  [/Step]
+
+  [Step]
+    ## But we can try our best!
+
+    After reviewing some researches, I have found that by using some models and unpopular ways, we can some how predict 
+    the turnaround point. At least we can do better visualizations compared to the ordinary one. Here are some main points:
+
+    ### 1. Use Logarithmic Scale
+    As we talked before, the logarithmic function is the reverse calculation for exponential function. By using the log scale,
+    we can model countries of huge different case difference. We already showed a divided graph of each countries because they
+    are hard to compare in ordinary linear scale. After we edit to the log scale, the situation is difference. Even these countries
+    differ a lot in case numbers, we can still compare them together. 
+      ![quill](static/images/overall.png)
+
+    ### 2. Focus on Change
+    As we talked before it is hard to find the turnaround point in exponential function based on the existed number. But in 
+    math area, there is an weapon called *Derivative*, which can focus on the sensitivity to change of a function. To make it simple, if we 
+    we can better identify the trend if we compare the growth rate. In the context of COVID-19, the new case number is a good indicator. 
+
+    ### 3. Plot based on other Index
+    We typically evaluate the trend based on time. The plot would be the case numbers versus the time.
+    But if we break this limitation, the plot could contain more valuable things. If we don't care about the date, but only
+    focus on the current situation, we can trow away the date. Then we use the plot with the new case number versus the existed cases.
+    The miracle will happen, as the definition of exponential function, the plot will appear as a straight line.
+      ![quill](static/images/existGrowth.png)
+        
+        
+    *Graph Created By [minutephysics](https://www.youtube.com/watch?v=54XLXg4fYsc)*
+
+
+  [/Step]
+
+[/Scroller]
+
+
+[br/]
+# Technical Details
+
+## Installation
+
+- Make sure you have `idyll` installed (`npm i -g idyll`).
+- Clone this repo and run `npm install`.
+
+
+    [var name:"exampleVar" value:5 /]
+
+    [Range min:0 max:10 value:exampleVar /]
+    [Display value:exampleVar /]
+    [data name:"lakeHuron" source:"lakeHuron.csv" /]
+    [CustomD3Component className:"d3-component" state:`state+1` /]
+
+## Developing a post locally
+
+Run `idyll`.
+
+## Building a post for production
+
+Run `idyll build`. The output will appear in the top-level `build` folder. To change the output location, change the `output` option in `package.json`.
+
+## Deploying
+
+Make sure your post has been built, then deploy the docs folder via any static hosting service.
+
+## Dependencies
+
+You can install custom dependencies by running `npm install <package-name> --save`. Note that any collaborators will also need download the package locally by running `npm install` after pulling the changes.
