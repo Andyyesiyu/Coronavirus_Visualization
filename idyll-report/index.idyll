@@ -17,7 +17,7 @@
 The coronavirus has continued to influence human beings. People also take plenty of measures like lockdown and travel restrictions 
 to fight against this transparent enemy. 
 But what effect of these measures and are them enough? What's the step are we located in the whole process? 
-Are we winning or losing? Are we below the turnaround point? 
+Are we winning or losing? Have we reached the turnaround point? 
 This is the topic we will cover today.
 
 ## The overall trending of COVID-19
@@ -110,9 +110,9 @@ I will give a detailed explanation below.
 
 
 ## Final Visualization Dashboard
-I have set up a Visualization dashboard here, which could link to a python backend  made all by myself.
+I have set up a Visualization dashboard implementing all the things above, you can play around here.
 
-[Dashboard Link](http://34.68.118.241:8866/)
+[Dashboard Link](http://visualization.andyyesiyu.com:8866/)
 
 Feel free to click it, it is running on Google Cloud with my personal education account, so this limits the running speed, please be patient.
 
@@ -124,3 +124,4 @@ Feel free to click it, it is running on Google Cloud with my personal education 
 * Inspired by [Aatishb](https://aatishb.com/covidtrends/)
 * Some graphs was created By [minutephysics](https://www.youtube.com/watch?v=54XLXg4fYsc)
 * Source code please check [my github](https://github.com/Andyyesiyu/Coronavirus_Visualization)
+* Server was set up on [Google Cloud](https://cloud.google.com/)
