@@ -12,7 +12,7 @@
   color:"#ffffff"
    /]
 
-# Introduction
+## Introduction
 
 The coronavirus has continued to influence human beings. People also take plenty of measures like lockdown and travel restrictions 
 to fight against this transparent enemy. 
@@ -20,7 +20,7 @@ But what effect of these measures and are them enough? What's the step are we lo
 Are we winning or losing? Are we below the turnaround point? 
 This is the topic we will cover today.
 
-# The overall trending of COVID-19
+## The overall trending of COVID-19
 
 There are many researches regarding the pandemic trending, which shows that it follows an exponentially increasing curve. 
 The exponential function arises at a rate proportional to its current value. 
@@ -109,10 +109,18 @@ I will give a detailed explanation below.
 [/Scroller]
 
 
-[br/]
-# Final Visualization Dashboard
-I have set up a Visualization dashboard here, which could link to [a python backend](http://34.68.118.241:8866/) made all by myself.
+## Final Visualization Dashboard
+I have set up a Visualization dashboard here, which could link to a python backend  made all by myself.
+
+[Dashboard Link](http://34.68.118.241:8866/)
+
 Feel free to click it, it is running on Google Cloud with my personal education account, so this limits the running speed, please be patient.
 
-Data from [Data World](https://data.world/markmarkoh/coronavirus-data)
-Inspired by [Aatishb](https://aatishb.com/covidtrends/)
+## Acknowledgements
+* This report was created using [Idyll](https://idyll-lang.org/).
+* Visualization was created using [Bqplot](https://github.com/bqplot/bqplot)
+* Python dashboard was rendered using [Voila](https://github.com/voila-dashboards/voila)
+* Data came from [Data World](https://data.world/markmarkoh/coronavirus-data)
+* Inspired by [Aatishb](https://aatishb.com/covidtrends/)
+* Some graphs was created By [minutephysics](https://www.youtube.com/watch?v=54XLXg4fYsc)
+* Source code please check [my github](https://github.com/Andyyesiyu/Coronavirus_Visualization)
